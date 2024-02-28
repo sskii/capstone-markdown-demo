@@ -50,7 +50,6 @@ docker run 																			\
 	--variable title='ECSE Capstone Project Risk Analysis: Team \#7'				\
 	--variable author="Person 1, Person 2"											\
 	--variable date="Semester 1, 2024"												\
-	--pdf-engine xelatex															\
 	--highlight-style .workflow-support/code.theme									\
 	--lua-filter .workflow-support/include-files.lua								\
 	$targetfile -o $outputfile
