@@ -6,7 +6,7 @@ LaTeX is good because text stays in plain text and because you include graphics 
 
 However, LaTeX is verbose in syntax and very error-prone. It's much more manageable when some intermediate tool generates it for you, and that's where Pandoc comes in.
 
-Math is easy.
+Pandoc makes math easy.
 
 $$ E = mc^2 $$
 
@@ -21,9 +21,9 @@ document.getElementById('clickme').addEventListener('click', () => {
 
 ```
 
-And figures like \autoref{fig:notus} can be pulled live from the web (even if that's a really bad idea and doesn't seem to run on macOS hosts presently).
+And figures like \autoref{fig:notus} can be pulled live from the web (even if that's usually a really bad idea from a reliability standpoint!).
 
-![Hopefully not how any of us will be looking during the project. \label{fig:notus}](https://thumbs.dreamstime.com/z/crying-man-modern-technology-26675651.jpg)
+![Hopefully not how any of us will be looking during the project. \label{fig:notus}](https://thumbs.dreamstime.com/z/crying-man-modern-technology-26675651.jpg){width=70%}
 
 Using Git means that we will be able to collaborate and continue to review the report even when offline (eg while on a bus). Having a PDF for every commit stored on GitHub may also provide an additional safety net when deadlines loom.[^2] Plus, we have to use Git and GitHub anyway according to the coursebook, so this will keep more of our collaboration in the same place.
 
