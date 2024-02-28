@@ -1,0 +1,18 @@
+% Pandoc uses its own really big LaTeX template, and this is
+% a bit difficult to modify. To keep things clear for this project
+% we'll just have Pandoc run our setup for us from this file after
+% it's finished its usual setup.
+% See the command line arguments passed to Pandoc to learn how this
+% is done with `-header-includes='\input{template/capstone_template.tex}'`.
+% If you want to see the template and have Pandoc installed you can
+% run the command `pandoc --print-default-template=latex`.
+
+% \documentclass[a4paper]{article}	% you'll find this in the Pandoc invocation arguments instead
+\usepackage[T1]{fontenc}
+\usepackage{parskip}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{bookman}
+
+% some additional styling
+\setmonofont[Path=.workflow-support/fonts/]{FiraCode-Regular.ttf}[BoldFont = FiraCode-SemiBold.ttf]

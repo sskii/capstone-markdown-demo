@@ -40,17 +40,24 @@ fi
 # no clue what the user flag is doing
 # run the image built earlier (using its tag)
 # arguments for Pandoc (multiple lines)
-docker run 																		\
-	--rm																		\
-	--volume "$(pwd):/data"														\
-	--user $(id -u):$(id -g)													\
-	pandocforcapstone															\
-	--variable header-includes='\input{.workflow-support/capstone_template.tex}'\
-	--variable papersize="a4" --variable documentclass="article"				\
-	--variable title='ECSE Capstone Project Risk Analysis: Team \#7'			\
-	--variable author="Person 1, Person 2"										\
-	--variable date="Semester 1, 2024"											\
-	--pdf-engine xelatex														\
-	--highlight-style .workflow-support/code.theme								\
-	--lua-filter .workflow-support/include-files.lua							\
+docker run 																			\
+	--rm																			\
+	--volume "$(pwd):/data"															\
+	--user $(id -u):$(id -g)														\
+	pandocforcapstone																\
+	--variable header-includes='\input{.workflow-support/capstone-formatting.tex}'	\
+	--variable papersize="a4" --variable documentclass="article"					\
+	--variable title='ECSE Capstone Project Risk Analysis: Team \#7'				\
+	--variable author="Person 1, Person 2"											\
+	--variable date="Semester 1, 2024"												\
+	--pdf-engine xelatex															\
+	--highlight-style .workflow-support/code.theme									\
+	--lua-filter .workflow-support/include-files.lua								\
 	$targetfile -o $outputfile
+
+
+### END
+# wrap up and alert the user
+
+echo
+echo "Done!"
