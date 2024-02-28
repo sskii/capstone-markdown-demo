@@ -6,11 +6,11 @@ jobs:
   pdf:
     runs-on: ubuntu-22.04
     steps:
-      - name: check out code
+      - name: Check out code
         uses: actions/checkout@v4
-      - name: invoke Pandoc via Docker
+      - name: Invoke Pandoc via Docker
         run: ./make-pdf.sh
-      - name: upload result
+      - name: Upload result to GitHub
         uses: actions/upload-artifact@v4
         with:
           name: main.pdf
